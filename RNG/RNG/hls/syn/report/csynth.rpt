@@ -1,0 +1,132 @@
+
+
+================================================================
+== Synthesis Summary Report of 'RNG'
+================================================================
++ General Information: 
+    * Date:           Wed Mar 12 16:04:45 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        RNG
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |               Modules              | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |         |           |           |     |
+    |               & Loops              | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ RNG                               |     -|  0.04|     2188|  2.188e+04|         -|     2189|     -|        no|     -|  11 (5%)|  1390 (1%)|  3584 (6%)|    -|
+    | + generic_fmod_double_s            |     -|  0.55|     2104|  2.104e+04|         -|     2104|     -|        no|     -|        -|  468 (~0%)|  1029 (1%)|    -|
+    |  + generic_fmod_double_Pipeline_1  |     -|  0.55|     2100|  2.100e+04|         -|     2100|     -|        no|     -|        -|   82 (~0%)|  351 (~0%)|    -|
+    |   o Loop 1                         |     -|  7.30|     2098|  2.098e+04|         2|        1|  2098|       yes|     -|        -|          -|          -|    -|
+    +------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++-----------+---------+-----------+----------+
+| Port      | Mode    | Direction | Bitwidth |
++-----------+---------+-----------+----------+
+| randFloat | ap_vld  | out       | 32       |
+| seedi     | ap_none | in        | 32       |
++-----------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+---------------+
+| Argument  | Direction | Datatype      |
++-----------+-----------+---------------+
+| seedi     | in        | unsigned int& |
+| randFloat | out       | float&        |
++-----------+-----------+---------------+
+
+* SW-to-HW Mapping
++-----------+------------------+---------+
+| Argument  | HW Interface     | HW Type |
++-----------+------------------+---------+
+| seedi     | seedi            | port    |
+| randFloat | randFloat        | port    |
+| randFloat | randFloat_ap_vld | port    |
++-----------+------------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------+-----+--------+--------------+---------+-----------+---------+
+| Name                               | DSP | Pragma | Variable     | Op      | Impl      | Latency |
++------------------------------------+-----+--------+--------------+---------+-----------+---------+
+| + RNG                              | 11  |        |              |         |           |         |
+|   icmp_ln241_fu_100_p2             |     |        | icmp_ln241   | seteq   | auto      | 0       |
+|   uitodp_64ns_64_6_no_dsp_1_U10    |     |        | tmp          | uitodp  | auto      | 5       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U8 | 11  |        | p_op         | dmul    | maxdsp    | 6       |
+|   select_ln223_fu_106_p3           |     |        | select_ln223 | select  | auto_sel  | 0       |
+|   add_ln486_fu_141_p2              |     |        | add_ln486    | add     | fabric    | 0       |
+|   sub_ln18_fu_155_p2               |     |        | sub_ln18     | sub     | fabric    | 0       |
+|   select_ln18_fu_177_p3            |     |        | select_ln18  | select  | auto_sel  | 0       |
+|   lshr_ln18_fu_191_p2              |     |        | lshr_ln18    | lshr    | auto_pipe | 0       |
+|   shl_ln18_fu_197_p2               |     |        | shl_ln18     | shl     | auto_pipe | 0       |
+|   val_fu_223_p3                    |     |        | val          | select  | auto_sel  | 0       |
+|   result_2_fu_230_p2               |     |        | result_2     | sub     | fabric    | 0       |
+|   result_fu_235_p3                 |     |        | result       | select  | auto_sel  | 0       |
+|   uitodp_64ns_64_6_no_dsp_1_U10    |     |        | conv_i       | uitodp  | auto      | 5       |
+|   ddiv_64ns_64ns_64_59_no_dsp_1_U9 |     |        | div_i        | ddiv    | fabric    | 58      |
+|   fptrunc_64ns_32_2_no_dsp_1_U7    |     |        | conv2_i      | fptrunc | auto      | 1       |
+|  + generic_fmod_double_s           | 0   |        |              |         |           |         |
+|    isF_e_x_fu_117_p2               |     |        | isF_e_x      | seteq   | auto      | 0       |
+|    isyBx_e_fu_123_p2               |     |        | isyBx_e      | setlt   | auto      | 0       |
+|    icmp_ln267_fu_129_p2            |     |        | icmp_ln267   | setne   | auto      | 0       |
+|    icmp_ln267_1_fu_135_p2          |     |        | icmp_ln267_1 | setgt   | auto      | 0       |
+|    or_ln267_fu_141_p2              |     |        | or_ln267     | or      | auto      | 0       |
+|    icmp_ln271_fu_147_p2            |     |        | icmp_ln271   | setne   | auto      | 0       |
+|    or_ln271_fu_153_p2              |     |        | or_ln271     | or      | auto      | 0       |
+|    n_fu_178_p2                     |     |        | n            | add     | fabric    | 0       |
+|    icmp_ln319_fu_205_p2            |     |        | icmp_ln319   | seteq   | auto      | 0       |
+|    ctlz_54_54_1_1_U4               |     |        | tmp_5        | ctlz    | auto      | 0       |
+|    add_ln325_fu_227_p2             |     |        | add_ln325    | add     | fabric    | 0       |
+|    icmp_ln325_fu_233_p2            |     |        | icmp_ln325   | seteq   | auto      | 0       |
+|    shl_ln325_fu_254_p2             |     |        | shl_ln325    | shl     | auto_pipe | 0       |
+|    ap_mx_2_fu_263_p3               |     |        | ap_mx_2      | select  | auto_sel  | 0       |
+|    sub_ln327_fu_271_p2             |     |        | sub_ln327    | sub     | fabric    | 0       |
+|    fz_exp_1_fu_280_p2              |     |        | fz_exp_1     | add     | fabric    | 0       |
+|   + generic_fmod_double_Pipeline_1 | 0   |        |              |         |           |         |
+|     icmp_ln308_fu_99_p2            |     |        | icmp_ln308   | seteq   | auto      | 0       |
+|     loop_2_fu_105_p2               |     |        | loop_2       | add     | fabric    | 0       |
+|     icmp_ln309_fu_122_p2           |     |        | icmp_ln309   | setgt   | auto      | 0       |
+|     add_ln310_fu_128_p2            |     |        | add_ln310    | add     | fabric    | 0       |
+|     r_sh_1_fu_134_p3               |     |        | r_sh_1       | select  | auto_sel  | 0       |
+|     icmp_ln311_fu_142_p2           |     |        | icmp_ln311   | setgt   | auto      | 0       |
+|     i_1_fu_154_p2                  |     |        | i_1          | add     | fabric    | 0       |
+|     r_sh_3_fu_160_p3               |     |        | r_sh_3       | select  | auto_sel  | 0       |
+|     i_2_fu_168_p3                  |     |        | i_2          | select  | auto_sel  | 0       |
++------------------------------------+-----+--------+--------------+---------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+  No pragmas found
+

@@ -1,0 +1,206 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "5 16 13",
+    "file": "RNG.cpp",
+    "fileloc": 265,
+    "instructions": 12,
+    "loads": {
+      "T": 1
+    },
+    "name": "RNG",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 9073
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 512,
+    "instructions": 4,
+    "name": "__signbit",
+    "total_instructions": 9
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "fmoddouble.cpp",
+    "fileloc": 6,
+    "instructions": 2,
+    "name": "fmod",
+    "total_instructions": 6895
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 456,
+    "instructions": 55,
+    "loads": {
+      "L": 1
+    },
+    "name": "fp_struct",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 319
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "10 4",
+    "file": "RNG.cpp",
+    "fileloc": 211,
+    "instructions": 11,
+    "loads": {
+      "L": 2
+    },
+    "name": "nextrand",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 9046
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "12",
+    "file": "RNG.cpp",
+    "fileloc": 259,
+    "instructions": 5,
+    "name": "ranf",
+    "total_instructions": 9051
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 454,
+    "instructions": 4,
+    "name": "fp_struct",
+    "total_instructions": 4
+  },
+  "15": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 485,
+    "instructions": 8,
+    "name": "expv",
+    "total_instructions": 109
+  },
+  "16": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "RNG.cpp",
+    "fileloc": 239,
+    "instructions": 7,
+    "name": "seedi",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 7
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 503,
+    "instructions": 24,
+    "name": "mantissa",
+    "total_instructions": 183
+  },
+  "2": {
+    "basicblocks": 16,
+    "calls": "11 17 15 15 1 1",
+    "file": "hls_case_IEEE754.h",
+    "fileloc": 12,
+    "instructions": 131,
+    "loads": {
+      "L": 1
+    },
+    "name": "generic_cast_IEEE754<long, AP_TRN_ZERO, double>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 2136
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "2",
+    "file": "hls_case_IEEE754.h",
+    "fileloc": 116,
+    "instructions": 2,
+    "name": "generic_cast_IEEE754<long, double>",
+    "total_instructions": 2138
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "3",
+    "file": "lib_floatconversion.cpp",
+    "fileloc": 56,
+    "instructions": 2,
+    "name": "__hls_fptosi_double_i64",
+    "total_instructions": 2140
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "RNG.cpp",
+    "fileloc": 186,
+    "instructions": 3,
+    "name": "rand31pm",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 3
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 475,
+    "instructions": 32,
+    "name": "data",
+    "total_instructions": 279
+  },
+  "7": {
+    "basicblocks": 42,
+    "calls": "11 11 14 8 8 8 8 8 8",
+    "file": "hls_fmod_rem_quo.h",
+    "fileloc": 225,
+    "instructions": 747,
+    "loads": {
+      "L": 25
+    },
+    "name": "generic_fmod<double>",
+    "stores": {
+      "L": 25
+    },
+    "total_instructions": 6893
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "9",
+    "file": "x_hls_utils.h",
+    "fileloc": 509,
+    "instructions": 2,
+    "name": "to_ieee",
+    "total_instructions": 303
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "6",
+    "file": "x_hls_utils.h",
+    "fileloc": 494,
+    "instructions": 18,
+    "loads": {
+      "L": 1
+    },
+    "name": "to_double",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 301
+  }
+}

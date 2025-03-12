@@ -1,0 +1,896 @@
+
+
+================================================================
+== Vitis HLS Report for 'RNG'
+================================================================
+* Date:           Wed Mar 12 16:04:45 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        RNG
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.258 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+-----------+-----+------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
+    |   min   |   max   |    min   |    max    | min |  max |   Type  |
+    +---------+---------+----------+-----------+-----+------+---------+
+    |       85|     2188|  0.850 us|  21.880 us|   86|  2189|       no|
+    +---------+---------+----------+-----------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 85
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 76 
+76 --> 77 
+77 --> 78 
+78 --> 79 
+79 --> 80 
+80 --> 81 
+81 --> 82 
+82 --> 83 
+83 --> 84 
+84 --> 85 
+85 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.55>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%seedi_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %seedi" [RNG.cpp:268]   --->   Operation 86 'read' 'seedi_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (2.55ns)   --->   "%icmp_ln241 = icmp_eq  i32 %seedi_read, i32 0" [RNG.cpp:241->RNG.cpp:268]   --->   Operation 87 'icmp' 'icmp_ln241' <Predicate = true> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.28>
+ST_2 : Operation 88 [6/6] (6.28ns)   --->   "%tmp = uitodp i32 %seedi_read" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 88 'uitodp' 'tmp' <Predicate = (!icmp_ln241)> <Delay = 6.28> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'uitodp' 'sitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.28>
+ST_3 : Operation 89 [5/6] (6.28ns)   --->   "%tmp = uitodp i32 %seedi_read" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 89 'uitodp' 'tmp' <Predicate = (!icmp_ln241)> <Delay = 6.28> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'uitodp' 'sitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.28>
+ST_4 : Operation 90 [4/6] (6.28ns)   --->   "%tmp = uitodp i32 %seedi_read" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 90 'uitodp' 'tmp' <Predicate = (!icmp_ln241)> <Delay = 6.28> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'uitodp' 'sitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.28>
+ST_5 : Operation 91 [3/6] (6.28ns)   --->   "%tmp = uitodp i32 %seedi_read" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 91 'uitodp' 'tmp' <Predicate = (!icmp_ln241)> <Delay = 6.28> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'uitodp' 'sitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.28>
+ST_6 : Operation 92 [2/6] (6.28ns)   --->   "%tmp = uitodp i32 %seedi_read" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 92 'uitodp' 'tmp' <Predicate = (!icmp_ln241)> <Delay = 6.28> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'uitodp' 'sitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.28>
+ST_7 : Operation 93 [1/6] (6.28ns)   --->   "%tmp = uitodp i32 %seedi_read" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 93 'uitodp' 'tmp' <Predicate = (!icmp_ln241)> <Delay = 6.28> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'uitodp' 'sitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.71>
+ST_8 : Operation 94 [7/7] (6.71ns)   --->   "%p_op = dmul i64 %tmp, i64 16807" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 94 'dmul' 'p_op' <Predicate = (!icmp_ln241)> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.71>
+ST_9 : Operation 95 [6/7] (6.71ns)   --->   "%p_op = dmul i64 %tmp, i64 16807" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 95 'dmul' 'p_op' <Predicate = (!icmp_ln241)> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.71>
+ST_10 : Operation 96 [5/7] (6.71ns)   --->   "%p_op = dmul i64 %tmp, i64 16807" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 96 'dmul' 'p_op' <Predicate = (!icmp_ln241)> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 6.71>
+ST_11 : Operation 97 [4/7] (6.71ns)   --->   "%p_op = dmul i64 %tmp, i64 16807" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 97 'dmul' 'p_op' <Predicate = (!icmp_ln241)> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.71>
+ST_12 : Operation 98 [3/7] (6.71ns)   --->   "%p_op = dmul i64 %tmp, i64 16807" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 98 'dmul' 'p_op' <Predicate = (!icmp_ln241)> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 6.71>
+ST_13 : Operation 99 [2/7] (6.71ns)   --->   "%p_op = dmul i64 %tmp, i64 16807" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 99 'dmul' 'p_op' <Predicate = (!icmp_ln241)> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.71>
+ST_14 : Operation 100 [1/7] (6.71ns)   --->   "%p_op = dmul i64 %tmp, i64 16807" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 100 'dmul' 'p_op' <Predicate = (!icmp_ln241)> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 7.25>
+ST_15 : Operation 101 [1/1] (1.48ns)   --->   "%select_ln223 = select i1 %icmp_ln241, i64 16807, i64 %p_op" [RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 101 'select' 'select_ln223' <Predicate = true> <Delay = 1.48> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 102 [2/2] (5.77ns)   --->   "%dc = call i64 @generic_fmod<double>, i64 %select_ln223" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/fmoddouble.cpp:7->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 102 'call' 'dc' <Predicate = true> <Delay = 5.77> <CoreType = "Generic">   --->   Generic Core
+
+State 16 <SV = 15> <Delay = 7.16>
+ST_16 : Operation 103 [1/2] (5.52ns)   --->   "%dc = call i64 @generic_fmod<double>, i64 %select_ln223" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/fmoddouble.cpp:7->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 103 'call' 'dc' <Predicate = true> <Delay = 5.52> <CoreType = "Generic">   --->   Generic Core
+ST_16 : Operation 104 [1/1] (0.00ns)   --->   "%data = bitcast i64 %dc" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:459->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:13->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 104 'bitcast' 'data' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 105 [1/1] (0.00ns)   --->   "%xs_sign = bitselect i1 @_ssdm_op_BitSelect.i1.i64.i32, i64 %data, i32 63" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:460->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:13->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 105 'bitselect' 'xs_sign' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 106 [1/1] (0.00ns)   --->   "%xs_exp = partselect i11 @_ssdm_op_PartSelect.i11.i64.i32, i64 %data, i32 52" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:461->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:13->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 106 'partselect' 'xs_exp' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 107 [1/1] (0.00ns)   --->   "%trunc_ln505 = trunc i64 %data" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:505->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 107 'trunc' 'trunc_ln505' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 108 [1/1] (0.00ns)   --->   "%zext_ln486 = zext i11 %xs_exp" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:486->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 108 'zext' 'zext_ln486' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 109 [1/1] (1.63ns)   --->   "%add_ln486 = add i12 %zext_ln486, i12 3073" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:486->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 109 'add' 'add_ln486' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_6 = bitselect i1 @_ssdm_op_BitSelect.i1.i12.i32, i12 %add_ln486, i32 11" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 110 'bitselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 111 [1/1] (1.63ns)   --->   "%sub_ln18 = sub i11 1023, i11 %xs_exp" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 111 'sub' 'sub_ln18' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 6.79>
+ST_17 : Operation 112 [1/1] (0.00ns)   --->   "%mantissa = bitconcatenate i54 @_ssdm_op_BitConcatenate.i54.i1.i52.i1, i1 1, i52 %trunc_ln505, i1 0" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 112 'bitconcatenate' 'mantissa' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 113 [1/1] (0.00ns)   --->   "%zext_ln15 = zext i54 %mantissa" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 113 'zext' 'zext_ln15' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 114 [1/1] (0.00ns)   --->   "%sext_ln18 = sext i11 %sub_ln18" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 114 'sext' 'sext_ln18' <Predicate = (tmp_6)> <Delay = 0.00>
+ST_17 : Operation 115 [1/1] (0.69ns)   --->   "%select_ln18 = select i1 %tmp_6, i12 %sext_ln18, i12 %add_ln486" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 115 'select' 'select_ln18' <Predicate = true> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_17 : Operation 116 [1/1] (0.00ns)   --->   "%sext_ln18_1 = sext i12 %select_ln18" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 116 'sext' 'sext_ln18_1' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 117 [1/1] (0.00ns)   --->   "%zext_ln18 = zext i32 %sext_ln18_1" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 117 'zext' 'zext_ln18' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 118 [1/1] (4.61ns)   --->   "%lshr_ln18 = lshr i169 %zext_ln15, i169 %zext_ln18" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 118 'lshr' 'lshr_ln18' <Predicate = (tmp_6)> <Delay = 4.61> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.61> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 119 [1/1] (4.61ns)   --->   "%shl_ln18 = shl i169 %zext_ln15, i169 %zext_ln18" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 119 'shl' 'shl_ln18' <Predicate = (!tmp_6)> <Delay = 4.61> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.61> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 120 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i64 @_ssdm_op_PartSelect.i64.i169.i32.i32, i169 %lshr_ln18, i32 53, i32 116" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:21->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 120 'partselect' 'tmp_2' <Predicate = (tmp_6)> <Delay = 0.00>
+ST_17 : Operation 121 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i64 @_ssdm_op_PartSelect.i64.i169.i32.i32, i169 %shl_ln18, i32 53, i32 116" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:21->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 121 'partselect' 'tmp_3' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_17 : Operation 122 [1/1] (1.48ns)   --->   "%val = select i1 %tmp_6, i64 %tmp_2, i64 %tmp_3" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 122 'select' 'val' <Predicate = true> <Delay = 1.48> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 5.00>
+ST_18 : Operation 123 [1/1] (3.52ns)   --->   "%result_2 = sub i64 0, i64 %val" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 123 'sub' 'result_2' <Predicate = (xs_sign)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 124 [1/1] (1.48ns)   --->   "%result = select i1 %xs_sign, i64 %result_2, i64 %val" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270]   --->   Operation 124 'select' 'result' <Predicate = true> <Delay = 1.48> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 6.28>
+ST_19 : Operation 125 [6/6] (6.28ns)   --->   "%conv_i = uitodp i64 %result" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 125 'uitodp' 'conv_i' <Predicate = true> <Delay = 6.28> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'uitodp' 'sitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 6.28>
+ST_20 : Operation 126 [5/6] (6.28ns)   --->   "%conv_i = uitodp i64 %result" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 126 'uitodp' 'conv_i' <Predicate = true> <Delay = 6.28> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'uitodp' 'sitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 6.28>
+ST_21 : Operation 127 [4/6] (6.28ns)   --->   "%conv_i = uitodp i64 %result" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 127 'uitodp' 'conv_i' <Predicate = true> <Delay = 6.28> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'uitodp' 'sitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 6.28>
+ST_22 : Operation 128 [3/6] (6.28ns)   --->   "%conv_i = uitodp i64 %result" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 128 'uitodp' 'conv_i' <Predicate = true> <Delay = 6.28> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'uitodp' 'sitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 6.28>
+ST_23 : Operation 129 [2/6] (6.28ns)   --->   "%conv_i = uitodp i64 %result" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 129 'uitodp' 'conv_i' <Predicate = true> <Delay = 6.28> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'uitodp' 'sitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 6.28>
+ST_24 : Operation 130 [1/6] (6.28ns)   --->   "%conv_i = uitodp i64 %result" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 130 'uitodp' 'conv_i' <Predicate = true> <Delay = 6.28> <CoreInst = "Int2Double">   --->   Core 66 'Int2Double' <Latency = 5> <II = 1> <Delay = 6.28> <FuncUnit> <Opcode : 'uitodp' 'sitodp'> <InPorts = 1> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 4.55>
+ST_25 : Operation 131 [59/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 131 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 4.55>
+ST_26 : Operation 132 [58/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 132 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 4.55>
+ST_27 : Operation 133 [57/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 133 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 4.55>
+ST_28 : Operation 134 [56/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 134 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 4.55>
+ST_29 : Operation 135 [55/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 135 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 4.55>
+ST_30 : Operation 136 [54/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 136 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 4.55>
+ST_31 : Operation 137 [53/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 137 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 4.55>
+ST_32 : Operation 138 [52/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 138 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 4.55>
+ST_33 : Operation 139 [51/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 139 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 4.55>
+ST_34 : Operation 140 [50/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 140 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 4.55>
+ST_35 : Operation 141 [49/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 141 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 4.55>
+ST_36 : Operation 142 [48/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 142 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 4.55>
+ST_37 : Operation 143 [47/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 143 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 4.55>
+ST_38 : Operation 144 [46/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 144 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 4.55>
+ST_39 : Operation 145 [45/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 145 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 4.55>
+ST_40 : Operation 146 [44/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 146 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 4.55>
+ST_41 : Operation 147 [43/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 147 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 4.55>
+ST_42 : Operation 148 [42/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 148 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 4.55>
+ST_43 : Operation 149 [41/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 149 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 4.55>
+ST_44 : Operation 150 [40/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 150 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 4.55>
+ST_45 : Operation 151 [39/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 151 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 4.55>
+ST_46 : Operation 152 [38/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 152 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 4.55>
+ST_47 : Operation 153 [37/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 153 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 4.55>
+ST_48 : Operation 154 [36/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 154 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 4.55>
+ST_49 : Operation 155 [35/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 155 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 4.55>
+ST_50 : Operation 156 [34/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 156 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 4.55>
+ST_51 : Operation 157 [33/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 157 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 4.55>
+ST_52 : Operation 158 [32/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 158 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 4.55>
+ST_53 : Operation 159 [31/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 159 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 53> <Delay = 4.55>
+ST_54 : Operation 160 [30/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 160 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 54> <Delay = 4.55>
+ST_55 : Operation 161 [29/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 161 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 55> <Delay = 4.55>
+ST_56 : Operation 162 [28/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 162 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 56> <Delay = 4.55>
+ST_57 : Operation 163 [27/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 163 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 57> <Delay = 4.55>
+ST_58 : Operation 164 [26/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 164 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 59 <SV = 58> <Delay = 4.55>
+ST_59 : Operation 165 [25/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 165 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 59> <Delay = 4.55>
+ST_60 : Operation 166 [24/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 166 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 61 <SV = 60> <Delay = 4.55>
+ST_61 : Operation 167 [23/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 167 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 61> <Delay = 4.55>
+ST_62 : Operation 168 [22/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 168 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 63 <SV = 62> <Delay = 4.55>
+ST_63 : Operation 169 [21/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 169 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 64 <SV = 63> <Delay = 4.55>
+ST_64 : Operation 170 [20/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 170 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 65 <SV = 64> <Delay = 4.55>
+ST_65 : Operation 171 [19/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 171 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 66 <SV = 65> <Delay = 4.55>
+ST_66 : Operation 172 [18/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 172 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 67 <SV = 66> <Delay = 4.55>
+ST_67 : Operation 173 [17/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 173 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 68 <SV = 67> <Delay = 4.55>
+ST_68 : Operation 174 [16/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 174 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 69 <SV = 68> <Delay = 4.55>
+ST_69 : Operation 175 [15/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 175 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 70 <SV = 69> <Delay = 4.55>
+ST_70 : Operation 176 [14/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 176 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 71 <SV = 70> <Delay = 4.55>
+ST_71 : Operation 177 [13/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 177 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 72 <SV = 71> <Delay = 4.55>
+ST_72 : Operation 178 [12/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 178 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 73 <SV = 72> <Delay = 4.55>
+ST_73 : Operation 179 [11/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 179 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 74 <SV = 73> <Delay = 4.55>
+ST_74 : Operation 180 [10/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 180 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 75 <SV = 74> <Delay = 4.55>
+ST_75 : Operation 181 [9/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 181 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 76 <SV = 75> <Delay = 4.55>
+ST_76 : Operation 182 [8/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 182 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 77 <SV = 76> <Delay = 4.55>
+ST_77 : Operation 183 [7/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 183 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 78 <SV = 77> <Delay = 4.55>
+ST_78 : Operation 184 [6/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 184 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 79 <SV = 78> <Delay = 4.55>
+ST_79 : Operation 185 [5/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 185 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 80 <SV = 79> <Delay = 4.55>
+ST_80 : Operation 186 [4/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 186 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 81 <SV = 80> <Delay = 4.55>
+ST_81 : Operation 187 [3/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 187 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 82 <SV = 81> <Delay = 4.55>
+ST_82 : Operation 188 [2/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 188 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 83 <SV = 82> <Delay = 4.55>
+ST_83 : Operation 189 [1/59] (4.55ns)   --->   "%div_i = ddiv i64 %conv_i, i64 2.14748e+09" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 189 'ddiv' 'div_i' <Predicate = true> <Delay = 4.55> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 58> <II = 1> <Delay = 4.55> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 84 <SV = 83> <Delay = 5.20>
+ST_84 : Operation 190 [2/2] (5.20ns)   --->   "%conv2_i = fptrunc i64 %div_i" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 190 'fptrunc' 'conv2_i' <Predicate = true> <Delay = 5.20> <CoreInst = "Double2Float">   --->   Core 67 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 85 <SV = 84> <Delay = 5.20>
+ST_85 : Operation 191 [1/1] (0.00ns)   --->   "%spectopmodule_ln265 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [RNG.cpp:265]   --->   Operation 191 'spectopmodule' 'spectopmodule_ln265' <Predicate = true> <Delay = 0.00>
+ST_85 : Operation 192 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %seedi"   --->   Operation 192 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_85 : Operation 193 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %seedi, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 193 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_85 : Operation 194 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %randFloat"   --->   Operation 194 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_85 : Operation 195 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %randFloat, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 195 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_85 : Operation 196 [1/2] (5.20ns)   --->   "%conv2_i = fptrunc i64 %div_i" [RNG.cpp:261->RNG.cpp:270]   --->   Operation 196 'fptrunc' 'conv2_i' <Predicate = true> <Delay = 5.20> <CoreInst = "Double2Float">   --->   Core 67 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_85 : Operation 197 [1/1] (0.00ns)   --->   "%bitcast_ln270 = bitcast i32 %conv2_i" [RNG.cpp:270]   --->   Operation 197 'bitcast' 'bitcast_ln270' <Predicate = true> <Delay = 0.00>
+ST_85 : Operation 198 [1/1] (0.00ns)   --->   "%write_ln270 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %randFloat, i32 %bitcast_ln270" [RNG.cpp:270]   --->   Operation 198 'write' 'write_ln270' <Predicate = true> <Delay = 0.00>
+ST_85 : Operation 199 [1/1] (0.00ns)   --->   "%ret_ln272 = ret" [RNG.cpp:272]   --->   Operation 199 'ret' 'ret_ln272' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 2.552ns
+The critical path consists of the following:
+	wire read operation ('seedi_read', RNG.cpp:268) on port 'seedi' (RNG.cpp:268) [8]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln241', RNG.cpp:241->RNG.cpp:268) [9]  (2.552 ns)
+
+ <State 2>: 6.282ns
+The critical path consists of the following:
+	'uitodp' operation 64 bit ('tmp', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [10]  (6.282 ns)
+
+ <State 3>: 6.282ns
+The critical path consists of the following:
+	'uitodp' operation 64 bit ('tmp', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [10]  (6.282 ns)
+
+ <State 4>: 6.282ns
+The critical path consists of the following:
+	'uitodp' operation 64 bit ('tmp', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [10]  (6.282 ns)
+
+ <State 5>: 6.282ns
+The critical path consists of the following:
+	'uitodp' operation 64 bit ('tmp', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [10]  (6.282 ns)
+
+ <State 6>: 6.282ns
+The critical path consists of the following:
+	'uitodp' operation 64 bit ('tmp', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [10]  (6.282 ns)
+
+ <State 7>: 6.282ns
+The critical path consists of the following:
+	'uitodp' operation 64 bit ('tmp', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [10]  (6.282 ns)
+
+ <State 8>: 6.719ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('p_op', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [11]  (6.719 ns)
+
+ <State 9>: 6.719ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('p_op', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [11]  (6.719 ns)
+
+ <State 10>: 6.719ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('p_op', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [11]  (6.719 ns)
+
+ <State 11>: 6.719ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('p_op', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [11]  (6.719 ns)
+
+ <State 12>: 6.719ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('p_op', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [11]  (6.719 ns)
+
+ <State 13>: 6.719ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('p_op', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [11]  (6.719 ns)
+
+ <State 14>: 6.719ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('p_op', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [11]  (6.719 ns)
+
+ <State 15>: 7.258ns
+The critical path consists of the following:
+	'select' operation 64 bit ('x', RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [12]  (1.481 ns)
+	'call' operation 64 bit ('x', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/fmoddouble.cpp:7->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) to 'generic_fmod<double>' [13]  (5.777 ns)
+
+ <State 16>: 7.168ns
+The critical path consists of the following:
+	'call' operation 64 bit ('x', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/fmoddouble.cpp:7->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) to 'generic_fmod<double>' [13]  (5.529 ns)
+	'add' operation 12 bit ('add_ln486', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:486->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [21]  (1.639 ns)
+
+ <State 17>: 6.790ns
+The critical path consists of the following:
+	'select' operation 12 bit ('select_ln18', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [25]  (0.697 ns)
+	'lshr' operation 169 bit ('lshr_ln18', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [28]  (4.612 ns)
+	'select' operation 64 bit ('val', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [32]  (1.481 ns)
+
+ <State 18>: 5.001ns
+The critical path consists of the following:
+	'sub' operation 64 bit ('result', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [33]  (3.520 ns)
+	'select' operation 64 bit ('result', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117->/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:56->RNG.cpp:223->RNG.cpp:261->RNG.cpp:270) [34]  (1.481 ns)
+
+ <State 19>: 6.282ns
+The critical path consists of the following:
+	'uitodp' operation 64 bit ('conv_i', RNG.cpp:261->RNG.cpp:270) [35]  (6.282 ns)
+
+ <State 20>: 6.282ns
+The critical path consists of the following:
+	'uitodp' operation 64 bit ('conv_i', RNG.cpp:261->RNG.cpp:270) [35]  (6.282 ns)
+
+ <State 21>: 6.282ns
+The critical path consists of the following:
+	'uitodp' operation 64 bit ('conv_i', RNG.cpp:261->RNG.cpp:270) [35]  (6.282 ns)
+
+ <State 22>: 6.282ns
+The critical path consists of the following:
+	'uitodp' operation 64 bit ('conv_i', RNG.cpp:261->RNG.cpp:270) [35]  (6.282 ns)
+
+ <State 23>: 6.282ns
+The critical path consists of the following:
+	'uitodp' operation 64 bit ('conv_i', RNG.cpp:261->RNG.cpp:270) [35]  (6.282 ns)
+
+ <State 24>: 6.282ns
+The critical path consists of the following:
+	'uitodp' operation 64 bit ('conv_i', RNG.cpp:261->RNG.cpp:270) [35]  (6.282 ns)
+
+ <State 25>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 26>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 27>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 28>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 29>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 30>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 31>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 32>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 33>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 34>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 35>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 36>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 37>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 38>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 39>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 40>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 41>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 42>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 43>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 44>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 45>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 46>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 47>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 48>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 49>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 50>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 51>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 52>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 53>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 54>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 55>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 56>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 57>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 58>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 59>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 60>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 61>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 62>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 63>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 64>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 65>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 66>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 67>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 68>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 69>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 70>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 71>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 72>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 73>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 74>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 75>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 76>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 77>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 78>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 79>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 80>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 81>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 82>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 83>: 4.552ns
+The critical path consists of the following:
+	'ddiv' operation 64 bit ('div_i', RNG.cpp:261->RNG.cpp:270) [36]  (4.552 ns)
+
+ <State 84>: 5.202ns
+The critical path consists of the following:
+	'fptrunc' operation 32 bit ('conv2_i', RNG.cpp:261->RNG.cpp:270) [37]  (5.202 ns)
+
+ <State 85>: 5.202ns
+The critical path consists of the following:
+	'fptrunc' operation 32 bit ('conv2_i', RNG.cpp:261->RNG.cpp:270) [37]  (5.202 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,3 @@
+relativeroot=/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG
+original_argv=--mode hls --package --config /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/hls_config.cfg --work_dir RNG 
+

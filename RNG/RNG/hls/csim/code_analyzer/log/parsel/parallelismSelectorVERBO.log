@@ -1,0 +1,671 @@
+parallelismSelector::VERBO: Summary of inputs: 
+parallelismSelector::VERBO: Output directory: "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/csim/code_analyzer/output"
+parallelismSelector::VERBO: spec:0:0: info: Will use basepath at location /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG
+parallelismSelector::VERBO: FPGA clock frequency is set to 100 MHz
+parallelismSelector::VERBO: Will use user-driven complete partitioning settings
+parallelismSelector::VERBO: Arrays with less than or equal to 4 elements that appear in the codegen directives will be completely partitioned
+parallelismSelector::VERBO: spec:0:0: info: Will use IR Module file at location /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/csim/code_analyzer/.internal/instrument/app_0/annotated.bc
+parallelismSelector::VERBO: FPGA frequency: 100000000 Hz
+parallelismSelector::VERBO: Using FPGA frequency for HLS estimations: 100000000 Hz
+parallelismSelector::VERBO: [Model Builder] Extracting logic model object from: /tools/Xilinx/Vitis/2024.2/vcxx/data/platform/logic/zynq.logic
+parallelismSelector::VERBO: Device characteristics: Area -- (LUTs: 53200, FFs: 106400, DSPs: 220, BRAMs: 280, URAMs: 0)
+parallelismSelector::VERBO: Maximum area for the hardware functions: AreaConstraint -- (LUTs: 53200, FFs: 106400, DSPs: 220, BRAMs: 280, URAMs: 0)
+parallelismSelector::VERBO: Code Analyzer Id: 1
+parallelismSelector::VERBO: Dataflow Hardware Function: _Z3RNGRjRf
+parallelismSelector::VERBO: Adding outline as primary transformation
+parallelismSelector::VERBO: RecipeFile: "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/csim/code_analyzer/.internal/dataflow/1/recipe.json"
+parallelismSelector::VERBO: Applying transformation: (region_outline)
+parallelismSelector::VERBO: Applying transformation: (outline)
+parallelismSelector::VERBO: Alias Equivalence: (Var <- { Pointees })
+                              21 <- {21}
+                              22 <- {22}
+                              24 <- {23, 36}
+                              27 <- {23, 38}
+                              29 <- {23, 39}
+                              33 <- {23, 29, 39}
+                              35 <- {23, 24, 36}
+                              36 <- {23}
+                              37 <- {21}
+                              38 <- {23}
+                              39 <- {23}
+                              40 <- {22}
+                            
+parallelismSelector::VERBO: No optimization objective set
+parallelismSelector::VERBO: Variable Infos:
+parallelismSelector::VERBO:     'seedi' /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp:265:0 VariableId 21
+                                  ElementBitsize=32
+                                  IsHlsStream=no
+                                  FunctionId= 221
+                                  IsArray=no
+                                  IsValidArray=no
+                                  IsArgument=yes
+                                  Elements=[-- ]
+                                  HasInsertionLoc=yes
+                                  IsFromSystemFunction=no
+parallelismSelector::VERBO:     'randFloat' /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp:265:0 VariableId 22
+                                  ElementBitsize=32
+                                  IsHlsStream=no
+                                  FunctionId= 221
+                                  IsArray=no
+                                  IsValidArray=no
+                                  IsArgument=yes
+                                  Elements=[-- ]
+                                  HasInsertionLoc=yes
+                                  IsFromSystemFunction=no
+parallelismSelector::VERBO:     'rand1pm' /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp:266:0 VariableId 23
+                                  ElementBitsize=64
+                                  IsHlsStream=no
+                                  FunctionId= 221
+                                  IsArray=no
+                                  IsValidArray=no
+                                  IsArgument=no
+                                  Elements=[ ]
+                                  HasInsertionLoc=yes
+                                  IsFromSystemFunction=no
+parallelismSelector::VERBO:     'this' unknown source VariableId 24
+                                  ElementBitsize=64
+                                  IsHlsStream=no
+                                  FunctionId= 222
+                                  IsArray=no
+                                  IsValidArray=no
+                                  IsArgument=yes
+                                  Elements=[-- ]
+                                  HasInsertionLoc=yes
+                                  IsFromSystemFunction=no
+parallelismSelector::VERBO:     'seedin' /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp:239:0 VariableId 26
+                                  ElementBitsize=64
+                                  IsHlsStream=no
+                                  FunctionId= 223
+                                  IsArray=no
+                                  IsValidArray=no
+                                  IsArgument=yes
+                                  Elements=[ ]
+                                  HasInsertionLoc=yes
+                                  IsFromSystemFunction=no
+parallelismSelector::VERBO:     'this' unknown source VariableId 27
+                                  ElementBitsize=64
+                                  IsHlsStream=no
+                                  FunctionId= 223
+                                  IsArray=no
+                                  IsValidArray=no
+                                  IsArgument=yes
+                                  Elements=[-- ]
+                                  HasInsertionLoc=yes
+                                  IsFromSystemFunction=no
+parallelismSelector::VERBO:     'this' unknown source VariableId 29
+                                  ElementBitsize=64
+                                  IsHlsStream=no
+                                  FunctionId= 224
+                                  IsArray=no
+                                  IsValidArray=no
+                                  IsArgument=yes
+                                  Elements=[-- ]
+                                  HasInsertionLoc=yes
+                                  IsFromSystemFunction=no
+parallelismSelector::VERBO:     'this' unknown source VariableId 33
+                                  ElementBitsize=64
+                                  IsHlsStream=no
+                                  FunctionId= 225
+                                  IsArray=no
+                                  IsValidArray=no
+                                  IsArgument=yes
+                                  Elements=[-- ]
+                                  HasInsertionLoc=yes
+                                  IsFromSystemFunction=no
+parallelismSelector::VERBO:     'this' unknown source VariableId 35
+                                  ElementBitsize=64
+                                  IsHlsStream=no
+                                  FunctionId= 226
+                                  IsArray=no
+                                  IsValidArray=no
+                                  IsArgument=yes
+                                  Elements=[-- ]
+                                  HasInsertionLoc=yes
+                                  IsFromSystemFunction=no
+parallelismSelector::VERBO:     'rand1pm' /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp:266:0 VariableId 36
+                                  ElementBitsize=64
+                                  IsHlsStream=no
+                                  FunctionId= 227
+                                  IsArray=no
+                                  IsValidArray=no
+                                  IsArgument=yes
+                                  Elements=[-- ]
+                                  HasInsertionLoc=yes
+                                  IsFromSystemFunction=no
+parallelismSelector::VERBO:     'rand1pm' /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp:266:0 VariableId 38
+                                  ElementBitsize=64
+                                  IsHlsStream=no
+                                  FunctionId= 228
+                                  IsArray=no
+                                  IsValidArray=no
+                                  IsArgument=yes
+                                  Elements=[-- ]
+                                  HasInsertionLoc=yes
+                                  IsFromSystemFunction=no
+parallelismSelector::VERBO:     'rand1pm' /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp:266:0 VariableId 39
+                                  ElementBitsize=64
+                                  IsHlsStream=no
+                                  FunctionId= 229
+                                  IsArray=no
+                                  IsValidArray=no
+                                  IsArgument=yes
+                                  Elements=[-- ]
+                                  HasInsertionLoc=yes
+                                  IsFromSystemFunction=no
+parallelismSelector::VERBO:     'randFloat' /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp:265:0 VariableId 40
+                                  ElementBitsize=32
+                                  IsHlsStream=no
+                                  FunctionId= 229
+                                  IsArray=no
+                                  IsValidArray=no
+                                  IsArgument=yes
+                                  Elements=[-- ]
+                                  HasInsertionLoc=yes
+                                  IsFromSystemFunction=no
+parallelismSelector::VERBO: Equivalence table
+                             Object with value: 24 is mapped to the object with value: 23
+                             Object with value: 27 is mapped to the object with value: 23
+                             Object with value: 29 is mapped to the object with value: 23
+                             Object with value: 33 is mapped to the object with value: 23
+                             Object with value: 35 is mapped to the object with value: 23
+                             Object with value: 36 is mapped to the object with value: 23
+                             Object with value: 38 is mapped to the object with value: 23
+                             Object with value: 39 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: Nesting structure:
+                            (empty)
+parallelismSelector::VERBO: Nesting structure after dynamic trip count update:
+                            (empty)
+parallelismSelector::VERBO: Function 'RNG' not inlined as per top-levels
+parallelismSelector::VERBO: Function 'Outline_T3_F221_R2_Atomic' not inlined as per dataflow task
+parallelismSelector::VERBO: Function 'Outline_T4_F221_R3_Call' not inlined as per dataflow task
+parallelismSelector::VERBO: Function 'Outline_T5_F221_R4_Call' not inlined as per dataflow task
+parallelismSelector::VERBO: Function 'rand31pm::rand31pm' inlined as per Vitis C++ heuristic
+parallelismSelector::VERBO: Function 'rand31pm::seedi' inlined as per Vitis C++ heuristic
+parallelismSelector::VERBO: Function 'rand31pm::ranf' inlined as per Vitis C++ heuristic
+parallelismSelector::VERBO: Function 'rand31pm::nextrand' inlined as per Vitis C++ heuristic
+parallelismSelector::VERBO: Function 'rand31pm::rand31pm' inlined as per Vitis C++ heuristic
+parallelismSelector::VERBO: Nesting structure after static trip count upper bound calculation for symbolically bounded loops:
+                            (empty)
+parallelismSelector::VERBO: Initial branch:
+                            FunctionPipelineTopLevel: Maybe
+                            (empty)
+parallelismSelector::VERBO: Initial branch after first round of constraints:
+                            FunctionPipelineTopLevel: Maybe
+                            (empty)
+parallelismSelector::VERBO: Nesting structure after user pragma constraints:
+                            (empty)
+parallelismSelector::VERBO: Initial branch after applying user pragma constraints:
+                            FunctionPipelineTopLevel: Maybe
+                            (empty)
+parallelismSelector::VERBO: Initial branch after applying Xilinx constraints:
+                            FunctionPipelineTopLevel: Maybe
+                            (empty)
+parallelismSelector::VERBO: DataflowConstrainer: Constraining Func/Loop with Id 221
+parallelismSelector::VERBO: DataflowConstrainer: Has no VariableSettingSpace: VarId=21
+parallelismSelector::VERBO: DataflowConstrainer: Has no VariableSettingSpace: VarId=23
+parallelismSelector::VERBO: DataflowConstrainer: Has no VariableSettingSpace: VarId=23
+parallelismSelector::VERBO: DataflowConstrainer: Has no VariableSettingSpace: VarId=23
+parallelismSelector::VERBO: DataflowConstrainer: Has no VariableSettingSpace: VarId=22
+parallelismSelector::VERBO: DataflowConstrainer: No VarIds in Loop/Func to be constrained
+parallelismSelector::VERBO: Initial branch after applying dataflow constraints:
+                            FunctionPipelineTopLevel: No
+                            (empty)
+parallelismSelector::VERBO: Removing reshape options from the design space because optimizing reshape is disabled
+                            
+parallelismSelector::VERBO: Initial branch after applying heuristic constraints:
+                            FunctionPipelineTopLevel: No
+                            (empty)
+parallelismSelector::VERBO: Initial branch after applying second round of Xilinx constraints:
+                            FunctionPipelineTopLevel: No
+                            (empty)
+parallelismSelector::VERBO: Initial branch after performance pragma constraints:
+                            FunctionPipelineTopLevel: No
+                            (empty)
+parallelismSelector::VERBO: Initial branch after PerfEst evaluation constraints:
+                            FunctionPipelineTopLevel: No
+                            (empty)
+parallelismSelector::VERBO: Initial constrained branch:
+                            FunctionPipelineTopLevel: No
+                            (empty)
+parallelismSelector::WARNG: [Logic Model - Warning] Operation FMOD is missing from the model
+parallelismSelector::WARNG: [Logic Model - Warning] Operation FMOD (IBW: 64, OBW: 64, Constantness: RHS_CONST) is missing from the model
+parallelismSelector::VERBO: HPE - Calculating latency and area for design space...
+                            Setting Space: FunctionPipelineTopLevel: No
+                            (empty)
+parallelismSelector::VERBO: Calculating latency for top level hw function: RNG
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(3 F=227) (36->23)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 36 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(8 F=222) (24->36)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 24 is mapped to the object with value: 23
+                             Object with value: 36 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(6 F=226) (35->24)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 24 is mapped to the object with value: 23
+                             Object with value: 35 is mapped to the object with value: 23
+                             Object with value: 36 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: Analyzing Function "rand31pm::rand31pm" (FunctionId 226):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: _ZN8rand31pmC2Ev
+parallelismSelector::VERBO:          - EndCycles: entry -> {1: 0}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 0}
+parallelismSelector::VERBO:        - Critical path: entry
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Analyzing Function "rand31pm::rand31pm" (FunctionId 222):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: _ZN8rand31pmC1Ev
+parallelismSelector::VERBO:          - EndCycles: entry -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: entry_iso0 -> {1: 1}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 1}
+parallelismSelector::VERBO:        - Critical path: entry, entry_iso0
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Analyzing Function "Outline_T3_F221_R2_Atomic" (FunctionId 227):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: Outline_T3_F221_R2_Atomic
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot_iso0 -> {1: 2}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 2}
+parallelismSelector::VERBO:        - Critical path: newFuncRoot, newFuncRoot_iso0
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(4 F=228) (38->23)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 38 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(9 F=223) (27->38)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 27 is mapped to the object with value: 23
+                             Object with value: 38 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: Analyzing Function "rand31pm::seedi" (FunctionId 223):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: _ZN8rand31pm5seediEm
+parallelismSelector::VERBO:          - EndCycles: entry -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: if.end -> {1: 2}
+parallelismSelector::VERBO:          - EndCycles: if.then -> {1: 2}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 2}
+parallelismSelector::VERBO:        - Critical path: entry, if.end, if.then
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Analyzing Function "Outline_T4_F221_R3_Call" (FunctionId 228):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: Outline_T4_F221_R3_Call
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot_iso0 -> {1: 3}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 3}
+parallelismSelector::VERBO:        - Critical path: newFuncRoot, newFuncRoot_iso0
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(5 F=229) (39->23)(40->22)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 39 is mapped to the object with value: 23
+                             Object with value: 40 is mapped to the object with value: 22
+                            
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(10 F=224) (29->39)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 29 is mapped to the object with value: 23
+                             Object with value: 39 is mapped to the object with value: 23
+                             Object with value: 40 is mapped to the object with value: 22
+                            
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(7 F=225) (33->29)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 29 is mapped to the object with value: 23
+                             Object with value: 33 is mapped to the object with value: 23
+                             Object with value: 39 is mapped to the object with value: 23
+                             Object with value: 40 is mapped to the object with value: 22
+                            
+parallelismSelector::VERBO: Analyzing Function "rand31pm::nextrand" (FunctionId 225):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: _ZN8rand31pm8nextrandEv
+parallelismSelector::VERBO:          - EndCycles: entry -> {1: 9}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 9}
+parallelismSelector::VERBO:        - Critical path: entry
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Analyzing Function "rand31pm::ranf" (FunctionId 224):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: _ZN8rand31pm4ranfEv
+parallelismSelector::VERBO:          - EndCycles: entry -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: entry_iso0 -> {1: 11}
+parallelismSelector::VERBO:          - EndCycles: entry_iso1 -> {1: 45}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 45}
+parallelismSelector::VERBO:        - Critical path: entry, entry_iso0, entry_iso1
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Analyzing Function "Outline_T5_F221_R4_Call" (FunctionId 229):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: Outline_T5_F221_R4_Call
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot_iso1 -> {1: 47}
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot_iso0 -> {1: 47}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 47}
+parallelismSelector::VERBO:        - Critical path: newFuncRoot_iso1, newFuncRoot, newFuncRoot_iso0
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Analyzing Function "RNG" (FunctionId 221):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: _Z3RNGRjRf
+parallelismSelector::VERBO:          - EndCycles: entry_iso3 -> {1: 56}
+parallelismSelector::VERBO:          - EndCycles: codeRepl2 -> {1: 56}
+parallelismSelector::VERBO:          - EndCycles: entry -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: codeRepl -> {1: 4}
+parallelismSelector::VERBO:          - EndCycles: codeRepl1 -> {1: 8}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 56}
+parallelismSelector::VERBO:        - Critical path: entry_iso3, codeRepl2, entry, codeRepl, codeRepl1
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Filling in latencies and intervals per loop...
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: _Z3RNGRjRf : 221
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(3 F=227) (36->23)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 36 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: Outline_T3_F221_R2_Atomic : 227
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(8 F=222) (24->36)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 24 is mapped to the object with value: 23
+                             Object with value: 36 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: _ZN8rand31pmC1Ev : 222
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(6 F=226) (35->24)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 24 is mapped to the object with value: 23
+                             Object with value: 35 is mapped to the object with value: 23
+                             Object with value: 36 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: _ZN8rand31pmC2Ev : 226
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(4 F=228) (38->23)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 38 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: Outline_T4_F221_R3_Call : 228
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(9 F=223) (27->38)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 27 is mapped to the object with value: 23
+                             Object with value: 38 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: _ZN8rand31pm5seediEm : 223
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Total unshareable area: LUTs: 23 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Self unshareable area: LUTs: 23 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Total unshareable area: LUTs: 23 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Self unshareable area: LUTs: 23 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(5 F=229) (39->23)(40->22)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 39 is mapped to the object with value: 23
+                             Object with value: 40 is mapped to the object with value: 22
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: Outline_T5_F221_R4_Call : 229
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(10 F=224) (29->39)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 29 is mapped to the object with value: 23
+                             Object with value: 39 is mapped to the object with value: 23
+                             Object with value: 40 is mapped to the object with value: 22
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: _ZN8rand31pm4ranfEv : 224
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(7 F=225) (33->29)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 29 is mapped to the object with value: 23
+                             Object with value: 33 is mapped to the object with value: 23
+                             Object with value: 39 is mapped to the object with value: 23
+                             Object with value: 40 is mapped to the object with value: 22
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: _ZN8rand31pm8nextrandEv : 225
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 2053 FFs: 395 DSPs: 11 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 2053 FFs: 395 DSPs: 11 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 2053 FFs: 395 DSPs: 11 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 2236 FFs: 433 DSPs: 11 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 2236 FFs: 433 DSPs: 11 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 2236 FFs: 433 DSPs: 11 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 2236 FFs: 433 DSPs: 11 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 2236 FFs: 433 DSPs: 11 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 2236 FFs: 433 DSPs: 11 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: Is valid space because UsedArea.Max <= GlobalConstr.AreaConstr
+parallelismSelector::VERBO: Initial constrained branch with estimates:
+                            FunctionPipelineTopLevel: No
+                            Id: 0 contains valid solution: --, min-max latency/interval:  lat 56 intv 57, min-max area:  LUTs: 2259 FFs: 433 DSPs: 11 BRAMs: 0
+parallelismSelector::VERBO: Initial FPGA area occupied (min): Area -- (LUTs: 2259, FFs: 433, DSPs: 11, BRAMs: 0, URAMs: 0)
+parallelismSelector::VERBO: Initial FPGA area occupied (max): Area -- (LUTs: 2259, FFs: 433, DSPs: 11, BRAMs: 0, URAMs: 0)
+parallelismSelector::VERBO: HPE - Calculating latency and area for design space...
+                            Setting Space: FunctionPipelineTopLevel: No
+                            (empty)
+parallelismSelector::VERBO: Calculating latency for top level hw function: RNG
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(3 F=227) (36->23)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 36 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(8 F=222) (24->36)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 24 is mapped to the object with value: 23
+                             Object with value: 36 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(6 F=226) (35->24)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 24 is mapped to the object with value: 23
+                             Object with value: 35 is mapped to the object with value: 23
+                             Object with value: 36 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: Analyzing Function "rand31pm::rand31pm" (FunctionId 226):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: _ZN8rand31pmC2Ev
+parallelismSelector::VERBO:          - EndCycles: entry -> {1: 0}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 0}
+parallelismSelector::VERBO:        - Critical path: entry
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Analyzing Function "rand31pm::rand31pm" (FunctionId 222):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: _ZN8rand31pmC1Ev
+parallelismSelector::VERBO:          - EndCycles: entry -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: entry_iso0 -> {1: 1}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 1}
+parallelismSelector::VERBO:        - Critical path: entry, entry_iso0
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Analyzing Function "Outline_T3_F221_R2_Atomic" (FunctionId 227):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: Outline_T3_F221_R2_Atomic
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot_iso0 -> {1: 2}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 2}
+parallelismSelector::VERBO:        - Critical path: newFuncRoot, newFuncRoot_iso0
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(4 F=228) (38->23)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 38 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(9 F=223) (27->38)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 27 is mapped to the object with value: 23
+                             Object with value: 38 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: Analyzing Function "rand31pm::seedi" (FunctionId 223):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: _ZN8rand31pm5seediEm
+parallelismSelector::VERBO:          - EndCycles: entry -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: if.end -> {1: 2}
+parallelismSelector::VERBO:          - EndCycles: if.then -> {1: 2}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 2}
+parallelismSelector::VERBO:        - Critical path: entry, if.end, if.then
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Analyzing Function "Outline_T4_F221_R3_Call" (FunctionId 228):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: Outline_T4_F221_R3_Call
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot_iso0 -> {1: 3}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 3}
+parallelismSelector::VERBO:        - Critical path: newFuncRoot, newFuncRoot_iso0
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(5 F=229) (39->23)(40->22)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 39 is mapped to the object with value: 23
+                             Object with value: 40 is mapped to the object with value: 22
+                            
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(10 F=224) (29->39)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 29 is mapped to the object with value: 23
+                             Object with value: 39 is mapped to the object with value: 23
+                             Object with value: 40 is mapped to the object with value: 22
+                            
+parallelismSelector::VERBO: [LatencyEstimationVisitor] CallSite: CS(7 F=225) (33->29)
+parallelismSelector::VERBO: [LatencyEstimationVisitor] Equivalence table
+                             Object with value: 29 is mapped to the object with value: 23
+                             Object with value: 33 is mapped to the object with value: 23
+                             Object with value: 39 is mapped to the object with value: 23
+                             Object with value: 40 is mapped to the object with value: 22
+                            
+parallelismSelector::VERBO: Analyzing Function "rand31pm::nextrand" (FunctionId 225):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: _ZN8rand31pm8nextrandEv
+parallelismSelector::VERBO:          - EndCycles: entry -> {1: 9}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 9}
+parallelismSelector::VERBO:        - Critical path: entry
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Analyzing Function "rand31pm::ranf" (FunctionId 224):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: _ZN8rand31pm4ranfEv
+parallelismSelector::VERBO:          - EndCycles: entry -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: entry_iso0 -> {1: 11}
+parallelismSelector::VERBO:          - EndCycles: entry_iso1 -> {1: 45}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 45}
+parallelismSelector::VERBO:        - Critical path: entry, entry_iso0, entry_iso1
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Analyzing Function "Outline_T5_F221_R4_Call" (FunctionId 229):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: Outline_T5_F221_R4_Call
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot_iso1 -> {1: 47}
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: newFuncRoot_iso0 -> {1: 47}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 47}
+parallelismSelector::VERBO:        - Critical path: newFuncRoot_iso1, newFuncRoot, newFuncRoot_iso0
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Analyzing Function "RNG" (FunctionId 221):
+parallelismSelector::VERBO:     MARegionScheduler::finalize():
+parallelismSelector::VERBO:        - Function: _Z3RNGRjRf
+parallelismSelector::VERBO:          - EndCycles: entry_iso3 -> {1: 56}
+parallelismSelector::VERBO:          - EndCycles: codeRepl2 -> {1: 56}
+parallelismSelector::VERBO:          - EndCycles: entry -> {1: 1}
+parallelismSelector::VERBO:          - EndCycles: codeRepl -> {1: 4}
+parallelismSelector::VERBO:          - EndCycles: codeRepl1 -> {1: 8}
+parallelismSelector::VERBO:        - MaxEndCycle: {1: 56}
+parallelismSelector::VERBO:        - Critical path: entry_iso3, codeRepl2, entry, codeRepl, codeRepl1
+parallelismSelector::VERBO: 
+parallelismSelector::VERBO: Filling in latencies and intervals per loop...
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: _Z3RNGRjRf : 221
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(3 F=227) (36->23)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 36 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: Outline_T3_F221_R2_Atomic : 227
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(8 F=222) (24->36)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 24 is mapped to the object with value: 23
+                             Object with value: 36 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: _ZN8rand31pmC1Ev : 222
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(6 F=226) (35->24)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 24 is mapped to the object with value: 23
+                             Object with value: 35 is mapped to the object with value: 23
+                             Object with value: 36 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: _ZN8rand31pmC2Ev : 226
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(4 F=228) (38->23)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 38 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: Outline_T4_F221_R3_Call : 228
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(9 F=223) (27->38)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 27 is mapped to the object with value: 23
+                             Object with value: 38 is mapped to the object with value: 23
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: _ZN8rand31pm5seediEm : 223
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Total unshareable area: LUTs: 23 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Self unshareable area: LUTs: 23 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Total unshareable area: LUTs: 23 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Self unshareable area: LUTs: 23 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(5 F=229) (39->23)(40->22)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 39 is mapped to the object with value: 23
+                             Object with value: 40 is mapped to the object with value: 22
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: Outline_T5_F221_R4_Call : 229
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(10 F=224) (29->39)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 29 is mapped to the object with value: 23
+                             Object with value: 39 is mapped to the object with value: 23
+                             Object with value: 40 is mapped to the object with value: 22
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: _ZN8rand31pm4ranfEv : 224
+parallelismSelector::VERBO: [AreaEstimationVisitor] CallSite: CS(7 F=225) (33->29)
+parallelismSelector::VERBO:   New Equivalence table
+                             Object with value: 29 is mapped to the object with value: 23
+                             Object with value: 33 is mapped to the object with value: 23
+                             Object with value: 39 is mapped to the object with value: 23
+                             Object with value: 40 is mapped to the object with value: 22
+                            
+parallelismSelector::VERBO: [AreaEstimationVisitor] Func: _ZN8rand31pm8nextrandEv : 225
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 2053 FFs: 395 DSPs: 11 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 2053 FFs: 395 DSPs: 11 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 2053 FFs: 395 DSPs: 11 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 2236 FFs: 433 DSPs: 11 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 2236 FFs: 433 DSPs: 11 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 2236 FFs: 433 DSPs: 11 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 2236 FFs: 433 DSPs: 11 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 2236 FFs: 433 DSPs: 11 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 2236 FFs: 433 DSPs: 11 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [Finalize] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Total shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Total unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: [AreaEstimationVisitor] Self shareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0 Self unshareable area: LUTs: 0 FFs: 0 DSPs: 0 BRAMs: 0
+parallelismSelector::VERBO: Estimated metrics for the application:
+parallelismSelector::VERBO: Function with Id 221:
+parallelismSelector::VERBO:     Interval: 57 - 57
+                                Latency: 56 - 56
+parallelismSelector::VERBO: Function with Id 222:
+parallelismSelector::VERBO:     Interval: 2 - 2
+                                Latency: 1 - 1
+parallelismSelector::VERBO: Function with Id 223:
+parallelismSelector::VERBO:     Interval: 3 - 3
+                                Latency: 2 - 2
+parallelismSelector::VERBO: Function with Id 224:
+parallelismSelector::VERBO:     Interval: 46 - 46
+                                Latency: 45 - 45
+parallelismSelector::VERBO: Function with Id 225:
+parallelismSelector::VERBO:     Interval: 10 - 10
+                                Latency: 9 - 9
+parallelismSelector::VERBO: Function with Id 226:
+parallelismSelector::VERBO:     Interval: 1 - 1
+                                Latency: 0 - 0
+parallelismSelector::VERBO: Function with Id 227:
+parallelismSelector::VERBO:     Interval: 3 - 3
+                                Latency: 2 - 2
+parallelismSelector::VERBO: Function with Id 228:
+parallelismSelector::VERBO:     Interval: 4 - 4
+                                Latency: 3 - 3
+parallelismSelector::VERBO: Function with Id 229:
+parallelismSelector::VERBO:     Interval: 48 - 48
+                                Latency: 47 - 47
+parallelismSelector::VERBO: Adding CallGuidance(SourceRange: /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp:266-266:14-14, TI: 2) for RegionTask 'Task(T3,F221,R2)'
+parallelismSelector::VERBO: Adding CallGuidance(SourceRange: /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp:268-268:5-24, TI: 3) for RegionTask 'Task(T4,F221,R3)'
+parallelismSelector::VERBO: Adding CallGuidance(SourceRange: /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp:270-270:17-30, TI: 46) for RegionTask 'Task(T5,F221,R4)'

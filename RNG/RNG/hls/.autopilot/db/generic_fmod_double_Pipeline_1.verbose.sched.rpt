@@ -1,0 +1,162 @@
+
+
+================================================================
+== Vitis HLS Report for 'generic_fmod_double_Pipeline_1'
+================================================================
+* Date:           Wed Mar 12 16:04:45 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        RNG
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.747 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    |  min |  max |                      Type                      |
+    +---------+---------+-----------+-----------+------+------+------------------------------------------------+
+    |     2100|     2100|  21.000 us|  21.000 us|  2099|  2099|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+------+------+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |     2098|     2098|         2|          1|          1|  2098|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.72>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%r_sh = alloca i32 1" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:298]   --->   Operation 5 'alloca' 'r_sh' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:299]   --->   Operation 6 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%loop = alloca i32 1" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:304]   --->   Operation 7 'alloca' 'loop' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%zext_ln300_read = read i53 @_ssdm_op_Read.ap_auto.i53, i53 %zext_ln300"   --->   Operation 8 'read' 'zext_ln300_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%zext_ln254_read = read i10 @_ssdm_op_Read.ap_auto.i10, i10 %zext_ln254"   --->   Operation 9 'read' 'zext_ln254_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%zext_ln300_cast = zext i53 %zext_ln300_read"   --->   Operation 10 'zext' 'zext_ln300_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln254_cast = zext i10 %zext_ln254_read"   --->   Operation 11 'zext' 'zext_ln254_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.58ns)   --->   "%store_ln304 = store i12 0, i12 %loop" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:304]   --->   Operation 12 'store' 'store_ln304' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 13 [1/1] (1.58ns)   --->   "%store_ln299 = store i13 %zext_ln254_cast, i13 %i" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:299]   --->   Operation 13 'store' 'store_ln299' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 14 [1/1] (1.58ns)   --->   "%store_ln298 = store i54 %zext_ln300_cast, i54 %r_sh" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:298]   --->   Operation 14 'store' 'store_ln298' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 15 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%loop_1 = load i12 %loop" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:308]   --->   Operation 16 'load' 'loop_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.54ns)   --->   "%icmp_ln308 = icmp_eq  i12 %loop_1, i12 2098" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:308]   --->   Operation 17 'icmp' 'icmp_ln308' <Predicate = true> <Delay = 1.54> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (1.54ns)   --->   "%loop_2 = add i12 %loop_1, i12 1" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:308]   --->   Operation 18 'add' 'loop_2' <Predicate = true> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln308 = br i1 %icmp_ln308, void %for.body.split, void %for.end.exitStub" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:308]   --->   Operation 19 'br' 'br_ln308' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (1.58ns)   --->   "%store_ln304 = store i12 %loop_2, i12 %loop" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:304]   --->   Operation 20 'store' 'store_ln304' <Predicate = (!icmp_ln308)> <Delay = 1.58>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%r_sh_load = load i54 %r_sh"   --->   Operation 36 'load' 'r_sh_load' <Predicate = (icmp_ln308)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i54P0A, i54 %r_sh_1_out, i54 %r_sh_load"   --->   Operation 37 'write' 'write_ln0' <Predicate = (icmp_ln308)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 38 'ret' 'ret_ln0' <Predicate = (icmp_ln308)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 6.74>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%r_sh_load_1 = load i54 %r_sh" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:310]   --->   Operation 21 'load' 'r_sh_load_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%i_load = load i13 %i" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:313]   --->   Operation 22 'load' 'i_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%specpipeline_ln298 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:298]   --->   Operation 23 'specpipeline' 'specpipeline_ln298' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%speclooptripcount_ln298 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 2098, i64 2098, i64 2098" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:298]   --->   Operation 24 'speclooptripcount' 'speclooptripcount_ln298' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (3.26ns)   --->   "%icmp_ln309 = icmp_ugt  i54 %r_sh_load_1, i54 9007199250546687" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:309]   --->   Operation 25 'icmp' 'icmp_ln309' <Predicate = true> <Delay = 3.26> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 3.26> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (3.26ns)   --->   "%add_ln310 = add i54 %r_sh_load_1, i54 9007199258935296" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:310]   --->   Operation 26 'add' 'add_ln310' <Predicate = true> <Delay = 3.26> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.26> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 27 [1/1] (0.94ns)   --->   "%r_sh_1 = select i1 %icmp_ln309, i54 %add_ln310, i54 %r_sh_load_1" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:309]   --->   Operation 27 'select' 'r_sh_1' <Predicate = true> <Delay = 0.94> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (1.67ns)   --->   "%icmp_ln311 = icmp_sgt  i13 %i_load, i13 0" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:311]   --->   Operation 28 'icmp' 'icmp_ln311' <Predicate = true> <Delay = 1.67> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node r_sh_3)   --->   "%r_sh_2 = shl i54 %r_sh_1, i54 1" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:312]   --->   Operation 29 'shl' 'r_sh_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (1.67ns)   --->   "%i_1 = add i13 %i_load, i13 8191" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:313]   --->   Operation 30 'add' 'i_1' <Predicate = true> <Delay = 1.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.94ns) (out node of the LUT)   --->   "%r_sh_3 = select i1 %icmp_ln311, i54 %r_sh_2, i54 %r_sh_1" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:311]   --->   Operation 31 'select' 'r_sh_3' <Predicate = true> <Delay = 0.94> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.69ns)   --->   "%i_2 = select i1 %icmp_ln311, i13 %i_1, i13 %i_load" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:311]   --->   Operation 32 'select' 'i_2' <Predicate = true> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (1.58ns)   --->   "%store_ln299 = store i13 %i_2, i13 %i" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:299]   --->   Operation 33 'store' 'store_ln299' <Predicate = true> <Delay = 1.58>
+ST_2 : Operation 34 [1/1] (1.58ns)   --->   "%store_ln298 = store i54 %r_sh_3, i54 %r_sh" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:298]   --->   Operation 34 'store' 'store_ln298' <Predicate = true> <Delay = 1.58>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln308 = br void %for.body" [/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:308]   --->   Operation 35 'br' 'br_ln308' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 4.723ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln304', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:304) of constant 0 on local variable 'loop', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:304 [11]  (1.588 ns)
+	'load' operation 12 bit ('loop', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:308) on local variable 'loop', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:304 [16]  (0.000 ns)
+	'add' operation 12 bit ('loop', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:308) [18]  (1.547 ns)
+	'store' operation 0 bit ('store_ln304', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:304) of variable 'loop', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:308 on local variable 'loop', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:304 [33]  (1.588 ns)
+
+ <State 2>: 6.747ns
+The critical path consists of the following:
+	'load' operation 54 bit ('r_sh_load_1', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:310) on local variable 'r_sh', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:298 [21]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln309', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:309) [25]  (3.262 ns)
+	'select' operation 54 bit ('r_sh', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:309) [27]  (0.948 ns)
+	'select' operation 54 bit ('r_sh', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:311) [31]  (0.948 ns)
+	'store' operation 0 bit ('store_ln298', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:298) of variable 'r_sh', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:311 on local variable 'r_sh', /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fmod_rem_quo.h:298 [35]  (1.588 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

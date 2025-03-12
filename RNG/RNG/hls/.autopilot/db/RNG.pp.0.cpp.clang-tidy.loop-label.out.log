@@ -1,0 +1,20 @@
+/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/.autopilot/db/RNG.pp.0.cpp:8838:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/.autopilot/db/RNG.pp.0.cpp:8838:5: note: FIX-IT applied suggested code changes
+/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/.autopilot/db/RNG.pp.0.cpp:8852:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/.autopilot/db/RNG.pp.0.cpp:8852:5: note: FIX-IT applied suggested code changes
+/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/.autopilot/db/RNG.pp.0.cpp:8866:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/.autopilot/db/RNG.pp.0.cpp:8866:5: note: FIX-IT applied suggested code changes
+/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/.autopilot/db/RNG.pp.0.cpp:10500:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/.autopilot/db/RNG.pp.0.cpp:10500:7: note: FIX-IT applied suggested code changes

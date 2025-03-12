@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG",
+    "arguments": [
+      "/tools/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/tools/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/tools/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=RNG",
+      "-c",
+      "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp"
+    ],
+    "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp"
+  },
+  {
+    "directory": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG",
+    "arguments": [
+      "/tools/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/tools/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=/tools/Xilinx/Vitis/2024.2/include",
+      "-c",
+      "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG_tb.cpp"
+    ],
+    "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG_tb.cpp"
+  }
+]

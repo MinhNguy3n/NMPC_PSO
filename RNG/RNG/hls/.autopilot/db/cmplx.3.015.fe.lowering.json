@@ -1,0 +1,26 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "RNG.cpp",
+    "fileloc": 265,
+    "instructions": 40,
+    "loads": {
+      "T": 1
+    },
+    "name": "RNG",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 186
+  },
+  "1": {
+    "basicblocks": 26,
+    "calls": "",
+    "file": "hls_fmod_rem_quo.h",
+    "fileloc": 225,
+    "instructions": 146,
+    "name": "generic_fmod<double>",
+    "total_instructions": 146
+  }
+}

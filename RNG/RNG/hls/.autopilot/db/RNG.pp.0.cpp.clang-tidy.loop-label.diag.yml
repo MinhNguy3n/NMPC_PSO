@@ -1,0 +1,40 @@
+---
+MainSourceFile:  /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/.autopilot/db/RNG.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/.autopilot/db/RNG.pp.0.cpp
+        Offset:          470898
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/.autopilot/db/RNG.pp.0.cpp
+        Offset:          471364
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/.autopilot/db/RNG.pp.0.cpp
+        Offset:          471831
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/.autopilot/db/RNG.pp.0.cpp
+        Offset:          755294
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+...

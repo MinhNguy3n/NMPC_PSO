@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/RNG.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Mar 12 16:04:09 2025",
+ "timestampMillis": "1741788249172",
+ "buildStep": {
+  "cmdId": "15a74296-dde7-452b-b63f-516763be19b2",
+  "name": "vitis-run",
+  "logFile": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/logs/RNG.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2024.2/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/hls_config.cfg --work_dir RNG ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/hls_config.cfg",
+   "--work_dir",
+   "RNG"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Mar 12 16:04:09 2025",
+ "timestampMillis": "1741788249173",
+ "status": {
+  "cmdId": "15a74296-dde7-452b-b63f-516763be19b2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Mar 12 16:04:13 2025",
+ "timestampMillis": "1741788253083",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "RNG",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+     "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Mar 12 16:04:13 2025",
+ "timestampMillis": "1741788253084",
+ "buildStep": {
+  "cmdId": "f055146a-a324-4af3-b231-c1f11e21b0f3",
+  "name": "",
+  "logFile": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Mar 12 16:04:13 2025",
+ "timestampMillis": "1741788253084",
+ "status": {
+  "cmdId": "f055146a-a324-4af3-b231-c1f11e21b0f3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Mar 12 16:04:17 2025",
+ "timestampMillis": "1741788257685",
+ "status": {
+  "cmdId": "f055146a-a324-4af3-b231-c1f11e21b0f3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Mar 12 16:04:17 2025",
+ "timestampMillis": "1741788257830",
+ "status": {
+  "cmdId": "15a74296-dde7-452b-b63f-516763be19b2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Mar 12 16:04:17 2025",
+ "timestampMillis": "1741788257831",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Mar 12 16:04:17 2025",
+ "timestampMillis": "1741788257831",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

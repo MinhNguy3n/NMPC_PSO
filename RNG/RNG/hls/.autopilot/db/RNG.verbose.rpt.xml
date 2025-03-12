@@ -1,0 +1,142 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'RNG'" level="0">
+<item name = "Date">Wed Mar 12 16:04:45 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">RNG</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.258 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">85, 2188, 0.850 us, 21.880 us, 86, 2189, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_generic_fmod_double_s_fu_73">generic_fmod_double_s, 1, 2104, 10.000 ns, 21.040 us, 1, 2104, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 1520, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 11, 810, 1615, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 449, -</column>
+<column name="Register">-, -, 580, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 5, 1, 6, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="ddiv_64ns_64ns_64_59_no_dsp_1_U9">ddiv_64ns_64ns_64_59_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="dmul_64ns_64ns_64_7_max_dsp_1_U8">dmul_64ns_64ns_64_7_max_dsp_1, 0, 11, 342, 586, 0</column>
+<column name="fptrunc_64ns_32_2_no_dsp_1_U7">fptrunc_64ns_32_2_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="grp_generic_fmod_double_s_fu_73">generic_fmod_double_s, 0, 0, 468, 1029, 0</column>
+<column name="uitodp_64ns_64_6_no_dsp_1_U10">uitodp_64ns_64_6_no_dsp_1, 0, 0, 0, 0, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln486_fu_141_p2">+, 0, 0, 12, 12, 11</column>
+<column name="result_2_fu_230_p2">-, 0, 0, 71, 1, 64</column>
+<column name="sub_ln18_fu_155_p2">-, 0, 0, 12, 10, 11</column>
+<column name="icmp_ln241_fu_100_p2">icmp, 0, 0, 39, 32, 1</column>
+<column name="lshr_ln18_fu_191_p2">lshr, 0, 0, 591, 169, 169</column>
+<column name="result_fu_235_p3">select, 0, 0, 64, 1, 64</column>
+<column name="select_ln18_fu_177_p3">select, 0, 0, 12, 1, 12</column>
+<column name="select_ln223_fu_106_p3">select, 0, 0, 64, 1, 63</column>
+<column name="val_fu_223_p3">select, 0, 0, 64, 1, 64</column>
+<column name="shl_ln18_fu_197_p2">shl, 0, 0, 591, 169, 169</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">435, 86, 1, 86</column>
+<column name="grp_fu_91_p0">14, 3, 64, 192</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln486_reg_276">12, 0, 12, 0</column>
+<column name="ap_CS_fsm">85, 0, 85, 0</column>
+<column name="div_i_reg_303">64, 0, 64, 0</column>
+<column name="grp_generic_fmod_double_s_fu_73_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_ln241_reg_251">1, 0, 1, 0</column>
+<column name="p_op_reg_256">64, 0, 64, 0</column>
+<column name="reg_94">64, 0, 64, 0</column>
+<column name="result_reg_298">64, 0, 64, 0</column>
+<column name="seedi_read_reg_246">32, 0, 32, 0</column>
+<column name="select_ln223_reg_261">64, 0, 64, 0</column>
+<column name="sub_ln18_reg_287">11, 0, 11, 0</column>
+<column name="tmp_6_reg_281">1, 0, 1, 0</column>
+<column name="trunc_ln505_reg_271">52, 0, 52, 0</column>
+<column name="val_reg_292">64, 0, 64, 0</column>
+<column name="xs_sign_reg_266">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, RNG, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, RNG, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, RNG, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, RNG, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, RNG, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, RNG, return value</column>
+<column name="seedi">in, 32, ap_none, seedi, pointer</column>
+<column name="randFloat">out, 32, ap_vld, randFloat, pointer</column>
+<column name="randFloat_ap_vld">out, 1, ap_vld, randFloat, pointer</column>
+</table>
+</item>
+</section>
+</profile>

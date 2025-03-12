@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/./sim/autowrap/testbench/RNG.cpp_pre.cpp.tb.cpp

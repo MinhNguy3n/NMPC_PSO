@@ -1,0 +1,80 @@
+<ENTRY>
+{
+ "thisFile": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG/hls/csim/code_analyzer/app.csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Mar 12 16:04:15 2025",
+ "timestampMillis": "1741788255299",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Mar 12 16:04:15 2025",
+ "timestampMillis": "1741788255299",
+ "buildStep": {
+  "cmdId": "e1d0bb06-ff4a-11ef-b001-5f472d0bcf84",
+  "name": "vitis_c++",
+  "logFile": "",
+  "commandLine": "vitis_c++ code_analyzer",
+  "args": [
+   "code_analyzer"
+  ],
+  "iniFiles": [],
+  "cwd": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Mar 12 16:04:15 2025",
+ "timestampMillis": "1741788255299",
+ "status": {
+  "cmdId": "e1d0bb06-ff4a-11ef-b001-5f472d0bcf84",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Mar 12 16:04:17 2025",
+ "timestampMillis": "1741788257651",
+ "status": {
+  "cmdId": "e1d0bb06-ff4a-11ef-b001-5f472d0bcf84",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Mar 12 16:04:17 2025",
+ "timestampMillis": "1741788257652",
+ "report": {
+  "path": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "VCXX_CODE_ANALYZER",
+  "cmdId": "e1d0bb06-ff4a-11ef-b001-5f472d0bcf84"
+ }
+}
+</ENTRY>

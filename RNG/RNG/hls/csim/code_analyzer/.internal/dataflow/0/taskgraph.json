@@ -1,0 +1,566 @@
+[
+    {
+        "name": "_Z3RNGRf",
+        "df_function": "%F215",
+        "df_type": "Function",
+        "project": "SLX",
+        "processes": {
+            "1": {
+                "id": "1",
+                "name": "Artificial<Start>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                        "line": 263,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                        "line": 270,
+                        "column": 1
+                    }
+                },
+                "display_name": "<START>",
+                "kind": "start"
+            },
+            "2": {
+                "id": "2",
+                "name": "Artificial<End>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                        "line": 263,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                        "line": 270,
+                        "column": 1
+                    }
+                },
+                "display_name": "<END>",
+                "kind": "end"
+            },
+            "3": {
+                "id": "3",
+                "name": "Region<OutlineCall(R2 RNG) BB 'codeRepl' [Atomic] 'Outline_T3_F215_R2_Atomic'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                        "line": 264,
+                        "column": 5
+                    },
+                    "end_loc": {
+                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                        "line": 264,
+                        "column": 21
+                    }
+                },
+                "display_name": "Process 1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                    "line": 264,
+                                    "column": 14
+                                },
+                                "id": "VId_19_!c?(?,?)",
+                                "name": "rand1pm",
+                                "display_name": "rand31pm rand1pm"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 8,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                        "line": 184,
+                                        "column": 24
+                                    },
+                                    "access_type": "i64",
+                                    "access_bit_width": 64,
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 3
+                },
+                "subregions": [
+                    {
+                        "id": "%F221_R2",
+                        "description": "<atomic 'entry_iso0'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 264,
+                                "column": 5
+                            },
+                            "end_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 264,
+                                "column": 21
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [],
+                "guidance": [
+                    {
+                        "type": "CallGuidance",
+                        "ti": {
+                            "min": 2,
+                            "max": 2
+                        },
+                        "ureg_id": "%F216",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 264,
+                                "column": 14
+                            },
+                            "end_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 264,
+                                "column": 14
+                            }
+                        }
+                    }
+                ]
+            },
+            "4": {
+                "id": "4",
+                "name": "Region<OutlineCall(R3 RNG) BB 'codeRepl1' [Call] 'Outline_T4_F215_R3_Call'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                        "line": 266,
+                        "column": 5
+                    },
+                    "end_loc": {
+                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                        "line": 266,
+                        "column": 21
+                    }
+                },
+                "display_name": "rand31pm::seedi()",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                    "line": 264,
+                                    "column": 14
+                                },
+                                "id": "VId_19_!c?(?,?)",
+                                "name": "rand1pm",
+                                "display_name": "rand31pm rand1pm"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 8,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                        "line": 240,
+                                        "column": 12
+                                    },
+                                    "access_type": "i64",
+                                    "access_bit_width": 64,
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 2
+                },
+                "subregions": [
+                    {
+                        "id": "%F222_R2",
+                        "description": "<call 'rand31pm::seedi'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 266,
+                                "column": 5
+                            },
+                            "end_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 266,
+                                "column": 21
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [
+                    {
+                        "id": "%F217",
+                        "region_type": "Function",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 266,
+                                "column": 5
+                            },
+                            "end_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 266,
+                                "column": 21
+                            }
+                        }
+                    }
+                ],
+                "guidance": [
+                    {
+                        "type": "CallGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ureg_id": "%F217",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 266,
+                                "column": 5
+                            },
+                            "end_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 266,
+                                "column": 21
+                            }
+                        }
+                    }
+                ]
+            },
+            "5": {
+                "id": "5",
+                "name": "Region<OutlineCall(R4 RNG) BB 'codeRepl2' [Call] 'Outline_T5_F215_R4_Call'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                        "line": 268,
+                        "column": 5
+                    },
+                    "end_loc": {
+                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                        "line": 268,
+                        "column": 30
+                    }
+                },
+                "display_name": "rand31pm::ranf()",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                    "line": 264,
+                                    "column": 14
+                                },
+                                "id": "VId_19_!c?(?,?)",
+                                "name": "rand1pm",
+                                "display_name": "rand31pm rand1pm"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 8,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                        "line": 221,
+                                        "column": 31
+                                    },
+                                    "access_type": "i64",
+                                    "access_bit_width": 64,
+                                    "exec_count": 1
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 8,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                        "line": 223,
+                                        "column": 17
+                                    },
+                                    "access_type": "i64",
+                                    "access_bit_width": 64,
+                                    "exec_count": 1
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 8,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                        "line": 221,
+                                        "column": 16
+                                    },
+                                    "access_type": "i64",
+                                    "access_bit_width": 64,
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                    "line": 263,
+                                    "column": 0
+                                },
+                                "id": "VId_18_*0(0,32)arg",
+                                "name": "randFloat",
+                                "display_name": "float &randFloat"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 4,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                        "line": 268,
+                                        "column": 15
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 0
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 48
+                },
+                "subregions": [
+                    {
+                        "id": "%F223_R2",
+                        "description": "<call 'rand31pm::ranf'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 268,
+                                "column": 5
+                            },
+                            "end_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 268,
+                                "column": 30
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [
+                    {
+                        "id": "%F218",
+                        "region_type": "Function",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 268,
+                                "column": 5
+                            },
+                            "end_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 268,
+                                "column": 30
+                            }
+                        }
+                    }
+                ],
+                "guidance": [
+                    {
+                        "type": "CallGuidance",
+                        "ti": {
+                            "min": 46,
+                            "max": 46
+                        },
+                        "ureg_id": "%F218",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 268,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                                "line": 268,
+                                "column": 30
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "channels": {
+            "rand1pm_WAW_3_4_#0": {
+                "name": "rand1pm_WAW_3_4_#0",
+                "variable_id": "VId_19_!c?(?,?)",
+                "variable_name": "rand1pm",
+                "declaration": "rand31pm rand1pm",
+                "kind": "Ptr",
+                "dependence": "WAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                    "line": 264,
+                    "column": 14
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "rand1pm_RAW_4_5_#1": {
+                "name": "rand1pm_RAW_4_5_#1",
+                "variable_id": "VId_19_!c?(?,?)",
+                "variable_name": "rand1pm",
+                "declaration": "rand31pm rand1pm",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 64,
+                "src_loc": {
+                    "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                    "line": 264,
+                    "column": 14
+                },
+                "metrics": {
+                    "volume": 64,
+                    "channel_rate": 1.3333333333333333E0
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "rand1pm_WAW_4_5_#2": {
+                "name": "rand1pm_WAW_4_5_#2",
+                "variable_id": "VId_19_!c?(?,?)",
+                "variable_name": "rand1pm",
+                "declaration": "rand31pm rand1pm",
+                "kind": "Ptr",
+                "dependence": "WAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                    "line": 264,
+                    "column": 14
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "randFloat_RAW_5_2_#3": {
+                "name": "randFloat_RAW_5_2_#3",
+                "variable_id": "VId_18_*0(0,32)arg",
+                "variable_name": "randFloat",
+                "declaration": "float &randFloat",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "/home/minh/Documents/UTU-Doctorate/control_theory/NMPC_GP/RNG/RNG.cpp",
+                    "line": 263,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 32,
+                    "channel_rate": 6.666666666666666E-1
+                },
+                "source": "5",
+                "sink": "2"
+            }
+        },
+        "control": [
+            {
+                "source": "3",
+                "sink": "4"
+            },
+            {
+                "source": "4",
+                "sink": "5"
+            },
+            {
+                "source": "1",
+                "sink": "3"
+            },
+            {
+                "source": "5",
+                "sink": "2"
+            }
+        ]
+    }
+]

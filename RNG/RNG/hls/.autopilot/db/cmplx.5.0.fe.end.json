@@ -1,0 +1,41 @@
+{
+    "0": {
+        "name": "RNG",
+        "file": "RNG.cpp",
+        "fileloc": "265",
+        "instructions": "38",
+        "total_instructions": "127",
+        "calls": "2",
+        "basicblocks": "1"
+    },
+    "1": {
+        "name": "generic_fmod<double>_Pipeline_1",
+        "file": "\/wrk\/ci\/prod\/2024.2\/hls_product\/continuous\/495\/2024.2\/src\/shared\/hls\/clib\/hlsmath\/include\/FloatingPoint\/hls_fmod_rem_quo.h",
+        "fileloc": "298",
+        "instructions": "34",
+        "total_instructions": "34",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "generic_fmod<double>",
+        "file": "hls_fmod_rem_quo.h",
+        "fileloc": "225",
+        "instructions": "55",
+        "total_instructions": "89",
+        "calls": "1",
+        "basicblocks": "11",
+        "loads": {
+            "L": "1"
+        }
+    }
+}
