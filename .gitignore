@@ -17,5 +17,7 @@
 .pdi
 .vitisWorkspace.json
 
-_ide/logs
-_ide/.wsdata
+#Ignore the ide and Xilinx folder
+.Xil
+_ide
+
