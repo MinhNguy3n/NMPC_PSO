@@ -1,0 +1,12 @@
+{
+  "name": "approx_rbf_kernel",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "approx_rbf_kernel"
+  },
+  "template": "empty_hls_component"
+}

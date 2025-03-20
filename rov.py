@@ -5,12 +5,13 @@ import numpy as np
 import cmath
 import matplotlib.pyplot as plt
 import tensorflow_probability as tfp
+import tensorflow.keras as keras
 
 np.random.seed(123)
 
-plt.rcParams['text.usetex'] = True
+# plt.rcParams['text.usetex'] = True
 
-def sin(x):
+def sin(x): 
     return np.sin(x)
 def cos(x):
     return np.cos(x)
@@ -141,6 +142,12 @@ for tt in range(len( t )):
     s1 = e1p + lam1*e1
     
     if len(Y_train) > 0 and use_gpr:
+        # print training set size
+        print('Training set size: X = ', len(X_train), ' Y = ', len(Y_train))
+        # print training set data
+        print("Training set: X_train ", X_train)
+        print("Training set: Y_train ", Y_train)
+
         gp_posterior = tfd.GaussianProcessRegressionModel(#calls tensorflow function for GPs
             kernel=kernel,
             index_points=np.array([s1]).reshape(-1, 1).astype(np.float32),
